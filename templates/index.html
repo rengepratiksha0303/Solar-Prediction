@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Energy Prediction</title>
+</head>
+<body>
+    <h1>Solar Energy Prediction (Linear Regression)</h1>
+
+    <form method="POST" action="/predict_form">
+        <p>Enter feature values (comma-separated):</p>
+        <input type="text" name="features" placeholder="e.g. 8.1, 12.3, 45.2 ..." size="50">
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h3>Predicted Solar Energy: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
